@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+        @model Enum
+
+        @if (EnumHelper.IsValidForEnumHelper(ViewData.ModelMetadata))
+    {
+        @Html.EnumDropDownListFor(model => model, htmlAttributes: new { @class = "dropdown" })
+}
+else
+{
+    @Html.TextBoxFor(model => model, htmlAttributes: new { @class = "dropdown" })
+
+
+
+}
+    </div>
+</body>
+</html>

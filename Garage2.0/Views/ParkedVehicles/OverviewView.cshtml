@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Garage2._0.Models.Overview>
+
+@{
+    ViewBag.Title = "OverviewView";
+}
+
+<h2>Currently Parked Vehicles</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RegistrationNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vehicletype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+       
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehicletype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+       
+    </tr>
+}
+
+</table>
